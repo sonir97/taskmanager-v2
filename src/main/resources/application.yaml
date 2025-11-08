@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: TaskManager
+
+  datasource:
+    url: jdbc:h2:mem:tasks
+    username: root
+    password: root
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
+
+  jackson:
+    mapper:
+      ACCEPT_CASE_INSENSITIVE_ENUMS: true
+
+server:
+  port: 8080
