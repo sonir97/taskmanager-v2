@@ -27,7 +27,7 @@ public class TaskStatusScheduler {
         this.taskService = taskService;
     }
 
-    @Scheduled(fixedRate = 10000)
+//    @Scheduled(fixedRate = 50000 )
     @Modifying
     @Transactional
     public void updateTaskStatus(){

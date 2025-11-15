@@ -3,18 +3,17 @@ spring:
     name: TaskManager
 
   datasource:
-    url: jdbc:h2:mem:tasks
-    username: root
-    password: root
-    driver-class-name: org.h2.Driver
-  h2:
-    console:
-      enabled: true
+    url: jdbc:postgresql://taskmanager-v2.c7mo8iiugj1n.ap-south-1.rds.amazonaws.com:5432/taskmanagerv2?sslmode=require
+    username: taskmanager
+    password: taskmanager
+    driver-class-name: org.postgresql.Driver
+
 
   jpa:
     hibernate:
       ddl-auto: update
-      dialect: org.hibernate.dialect.H2Dialect
+      default_schema: taskmanager_schema
+      dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
 
   jackson:

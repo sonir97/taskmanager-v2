@@ -16,7 +16,7 @@ import java.time.ZoneId;
 import java.util.UUID;
 
 @Entity
-@Table(name="tasks", uniqueConstraints = @UniqueConstraint(columnNames = {"task_id"}, name = "task_id_unique"))
+@Table(name="tasks", schema = "taskmanager_schema", uniqueConstraints = @UniqueConstraint(columnNames = {"task_id"}, name = "task_id_unique"))
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
